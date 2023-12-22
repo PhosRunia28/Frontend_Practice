@@ -1,9 +1,13 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/gsap-core";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
+import Faq from "./components/Faq";
+import Footer from "./components/Footer";
+import Main from "./components/Main";
 import NavHeaderDesktop from "./components/NavHeaderDesktop";
 import NavHeaderMobile from "./components/NavHeaderMobile";
 import pulseLogo from "./img/pulse-logo.svg";
+
 function App() {
   const container = useRef();
   const tl = useRef();
@@ -46,7 +50,7 @@ function App() {
   return (
     <div className="font-workSans">
       <header ref={container}>
-        <nav className="relative z-30 flex items-center justify-between border-b bg-white px-8 py-4 md:bg-secondary md:pt-9 lg:px-24">
+        <nav className="relative z-30 flex items-center justify-between border-b bg-white px-6 py-4 md:border-none md:bg-secondary md:pt-9 lg:px-10 xl:px-24">
           {/* logo */}
           <div className="">
             <img src={pulseLogo} alt="pulse Logo" className="bg-cover" />
@@ -62,10 +66,14 @@ function App() {
             <span className="mb-1.5 block h-[3px] w-[2rem] bg-primary"></span>
             <span className="mb-1.5 block h-[3px] w-[2rem] bg-primary"></span>
           </button>
+          {/* nav menu */}
           <NavHeaderDesktop />
           <NavHeaderMobile />
         </nav>
       </header>
+      <Main />
+      <Faq />
+      <Footer />
     </div>
   );
 }

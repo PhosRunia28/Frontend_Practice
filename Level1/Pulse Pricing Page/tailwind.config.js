@@ -11,7 +11,7 @@ export default {
         secondary: "#EAFAF1",
         info: "#F2F3F3",
         button: "#1FE374",
-        footer_bg: "#080C16",
+        footer: "#080C16",
       },
     },
   },

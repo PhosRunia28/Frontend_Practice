@@ -1,4 +1,4 @@
-import { linkHeadersDesktop } from "../links";
+import { linkHeadersDesktop } from "../js/links";
 import SignupButton from "./SignupButton";
 export default function NavHeaderDesktop() {
   return (
@@ -16,7 +16,11 @@ export default function NavHeaderDesktop() {
             </li>
           );
         })}
-        <SignupButton name="Sign Up" className="bg-secondary text-primary" />
+        <SignupButton
+          name="Sign Up"
+          className="bg-secondary text-primary"
+          back="bg-primary"
+        />
       </ul>
     </nav>
   );

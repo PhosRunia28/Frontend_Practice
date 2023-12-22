@@ -1,10 +1,10 @@
-import { linkHeadersMobile } from "../links";
+import { linkHeadersMobile } from "../js/links";
 import SignupButton from "./SignupButton";
 export default function NavHeaderMobile() {
   return (
     <div className="navMobile absolute inset-x-0 top-20 -z-10 block h-[90vh] w-full bg-secondary md:hidden">
       <nav>
-        <ul className="mt-10 flex flex-col gap-4  px-8">
+        <ul className="mt-10 flex flex-col gap-4  px-6">
           {linkHeadersMobile.map((link, index) => {
             return (
               <li key={index}>
@@ -19,7 +19,9 @@ export default function NavHeaderMobile() {
           })}
           <SignupButton
             name="Sign Up for a Free 30-Day Trial"
-            className="inline-block bg-secondary py-3 text-black"
+            className="inline-block max-w-fit bg-secondary py-3 text-black"
+            back="bg-primary"
+            fit={true}
           />
         </ul>
       </nav>

@@ -6,7 +6,7 @@ export default function NavBar() {
   const container = useRef();
   const hamburgerRef = useRef(null);
   const tl = useRef(
-    gsap.timeline({ defaults: { duration: 0.6, ease: "power1.inOut" } })
+    gsap.timeline({ defaults: { duration: 0.4, ease: "power1.inOut" } })
   );
   const [isNavOpen, setIsNavOpen] = useState(false);
   const navLink = [
@@ -51,7 +51,7 @@ export default function NavBar() {
         opacity: 0,
       });
     },
-    { dependencies: [isNavOpen], scope: container }
+    { scope: container }
   );
 
   const openNavMobile = contextSafe(() => {
